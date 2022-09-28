@@ -7,6 +7,8 @@ console.log(userName);
 let userSurname = 'Ignatenko';
 console.log(userSurname);
 
+console.log('Hello world');
+
 let newUserName;
 
 let shoppingList;
