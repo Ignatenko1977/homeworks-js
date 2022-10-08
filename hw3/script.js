@@ -31,12 +31,9 @@ alert("Вы ввели числа: " + oneNumber + " и " + twoNumber);
 
 if (oneNumber > twoNumber) {
     alert("число " + oneNumber + " больше,чем число " + twoNumber);
-}
-if (oneNumber < twoNumber) {
+} else if (oneNumber < twoNumber) {
     alert("число " + twoNumber + " больше,чем число " + oneNumber);
-}
-
-if (oneNumber === twoNumber) {
+} else if (oneNumber === twoNumber) {
     alert('Числа равны');
 }
 
@@ -63,3 +60,54 @@ if (oneNumber === twoNumber) {
 
 
 
+let num1 = Number(prompt("первое число"));
+console.log(`num1`, num1)
+
+let operator = prompt("выбирите действие (/,+,*,-)");
+
+let num2 = Number(prompt("второе число"));
+console.log(`num2`, num2)
+
+
+switch (operator) {
+    case '+':
+        alert(num1 + num2);
+        break;
+    case '-':
+        alert(num1 - num2);
+        break;
+    case '/':
+        alert(num1 / num2);
+        break;
+    case '*':
+        alert(num1 * num2);
+        break;
+
+    default:
+
+        alert("Такого оператора не существует");
+
+
+}
+
+// ----------------Lesson_3------------
+
+
+let visitorAnswer = Number(prompt("Сколько вам лет"));
+
+if ((visitorAnswer >= 12 && visitorAnswer < 18) || (visitorAnswer >= 60 && visitorAnswer <= 80)) {
+
+    let parentalPermission = confirm("Есть ли у вас разрешение от родителей?");
+
+    if (parentalPermission) {
+        alert("Доступ разрешен")
+    } else {
+        alert("Доступ запрещен")
+    }
+} else if (visitorAnswer < 12 || visitorAnswer > 80) {
+    alert("Доступ запрещен")
+} else if (visitorAnswer >= 18 && visitorAnswer <= 60) {
+    alert("Доступ разрешер")
+} else {
+    alert("Значение неизвестно")
+}
